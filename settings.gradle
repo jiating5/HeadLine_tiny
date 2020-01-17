@@ -1,0 +1,2 @@
+include ':app', ':BaseModule', ':CommonModule', ':UserCenterModule', ':HomeModule', ':VideoModule', ':HeadLineModule', ':MineModule'
+rootProject.name='Headline_tiny'
