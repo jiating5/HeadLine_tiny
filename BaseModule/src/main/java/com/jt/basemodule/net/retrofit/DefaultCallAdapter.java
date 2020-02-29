@@ -1,4 +1,4 @@
-package com.jt.basemodule.net.retrofit;
+package com.bawei.basemodel.net.retrofit;
 
 import java.lang.reflect.Type;
 

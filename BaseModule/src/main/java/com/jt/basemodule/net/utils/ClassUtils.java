@@ -1,13 +1,10 @@
-package com.jt.commonmodule.utils;
+package com.bawei.basemodel.common;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
- * @author 贾婷
- * @date 2020/1/15.
- * GitHub：https://github.com/jiating5
- * description：
+ * 类型工具类
  */
 public class ClassUtils {
     /**

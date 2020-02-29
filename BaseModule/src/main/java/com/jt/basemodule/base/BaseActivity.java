@@ -1,10 +1,12 @@
-package com.jt.basemodule.base;
+package com.zy.news.base;
 
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
+import com.zy.news.common.ClassUtils;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,13 +15,10 @@ import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.jt.commonmodule.utils.ClassUtils;
-
 /**
- * @author 贾婷
- * @date 2020/1/15.
- * GitHub：https://github.com/jiating5
- * description：activity基类
+ * Base Activity
+ * @param <VM> ViewModel
+ * @param <D> DataBinding
  */
 public abstract class BaseActivity<VM extends ViewModel,D extends ViewDataBinding> extends AppCompatActivity {
     protected VM mViewModel;

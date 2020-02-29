@@ -1,13 +1,13 @@
-package com.jt.basemodule.net.retrofit;
+package com.bawei.basemodel.net.retrofit;
 
 import android.os.Looper;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
-import com.jt.basemodule.net.bean.BaseRespEntity;
+import com.bawei.basemodel.net.protocol.resp.BaseRespEntity;
 
 import java.lang.reflect.Type;
+
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
 import retrofit2.CallAdapter;
 import retrofit2.Callback;
@@ -31,7 +31,7 @@ public class LiveDataCallAdapter<R> implements CallAdapter<R, LiveData<BaseRespE
         call.enqueue(new Callback<R>() {
             @Override
             public void onResponse(Call<R> call, Response<R> response) {
-                if (Looper.getMainLooper().getThread()== Thread.currentThread()){
+                if (Looper.getMainLooper().getThread()==Thread.currentThread()){
                     data.setValue((BaseRespEntity<R>) response.body());
                 }else{
                     data.postValue((BaseRespEntity<R>) response.body());
@@ -42,7 +42,7 @@ public class LiveDataCallAdapter<R> implements CallAdapter<R, LiveData<BaseRespE
             @Override
             public void onFailure(Call<R> call, Throwable t) {
 
-                if (Looper.getMainLooper().getThread()== Thread.currentThread()){
+                if (Looper.getMainLooper().getThread()==Thread.currentThread()){
                     data.setValue(null);
                 }else{
                     data.postValue(null);

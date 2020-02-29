@@ -1,12 +1,6 @@
-package com.jt.basemodule.net.bean;
+package com.zy.news.net.protocol.resp;
 
-/**
- * @author 贾婷
- * @date 2020/1/15.
- * GitHub：https://github.com/jiating5
- * description：Tokenbean
- */
-public class TokenBean {
+public class TokenRespEntity {
     private String access_token;
     private String token_type;
     private int expires_in;
